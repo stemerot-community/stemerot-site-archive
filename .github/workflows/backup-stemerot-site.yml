@@ -1,0 +1,61 @@
+name: Mirror using cron the stemerot.com site and store in this repo a backup
+
+on:
+  push:
+    branches: 
+      - main
+  schedule:
+    - cron: '0 12 * * *' # Runs at noon UTC every day
+
+# Ensure only one build per branch is running at a time
+concurrency:
+  group: mirror-stemerot-site
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Mirror Stemerot site
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 2: Install wget and httrack
+      - name: Install wget and httrack
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget httrack
+
+      # Step 3: Checkout website-archives branch
+      - name: Checkout website-archives branch
+        run: |
+          git fetch origin website-archives
+          git checkout website-archives
+
+      # Step 4: Clean the directory of the previous mirror
+      - name: Clean up previous mirror
+        run: |
+          rm -rf wget-stemerot-site/*
+
+      # Step 5: Run wget-stemerot-site.sh script to mirror the site
+      - name: Run wget-stemerot-site.sh
+        run: |
+          chmod +x ./wget-stemerot-site.sh
+          ./wget-stemerot-site.sh
+
+      # Step 7: Commit changes if any
+      - name: Commit changes if any
+        run: |
+          # Get the current date and time in UTC
+          commit_date=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          
+          # Stage changes
+          git add .
+          
+          # Commit changes if there are any
+          git diff --cached --quiet || git commit -m "Update mirrored site on $commit_date"
+          
+          # Push changes to the website-archives branch
+          git push origin website-archives
