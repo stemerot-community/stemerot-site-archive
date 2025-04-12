@@ -28,25 +28,37 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y wget httrack
 
-      # Step 3: Checkout website-archives branch
-      - name: Checkout website-archives branch
-        run: |
-          git fetch origin website-archives
-          git checkout website-archives
-
-      # Step 4: Clean the directory of the previous mirror
+      # Step 3: Clean the directory of the previous mirror
       - name: Clean up previous mirror
         run: |
           ls
           pwd
           ./CLEANUP
 
-      # Step 5: Run wget-stemerot-site.sh script to mirror the site
+      # Step 4: Run wget-stemerot-site.sh script to mirror the site
       - name: Run wget-stemerot-site.sh
         run: |
           ./wget-stemerot-site.sh
 
-      # Step 7: Commit changes if any
+      # Step 5: 
+      - name: Stash changes
+        run: |
+          git stash
+
+      # Step 6: Checkout website-archives branch
+      - name: Checkout website-archives branch
+        run: |
+          git fetch origin website-archives
+          git checkout website-archives
+
+      # Step 7: 
+      - name: Pop changes
+        run: |
+          git stash pop
+          ls
+          pwd
+
+      # Step 8: Commit changes if any
       - name: Commit changes if any
         run: |
           # Get the current date and time in UTC
