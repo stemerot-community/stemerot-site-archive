@@ -12,6 +12,9 @@ concurrency:
   group: mirror-stemerot-site
   cancel-in-progress: true
 
+permissions:
+  contents: write  # Allows the bot to push commits
+  
 jobs:
   build:
     name: Mirror Stemerot site
@@ -50,3 +53,4 @@ jobs:
         with:
           commit_message: Archive - $(date -u +"%Y-%m-%d %H:%M:%S UTC")
           branch: website-archives
+          token: ${{ secrets.GITHUB_TOKEN }}  # Use the default GitHub Actions token
