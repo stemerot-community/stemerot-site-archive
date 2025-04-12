@@ -14,3 +14,5 @@ wget \
     --wait 1 --limit-rate=100K \
     -P "./stemerot-site-wget/" \
     https://stemerot.com | tee ./stemerot-site-wget/wget-logs.txt
+
+exit 0

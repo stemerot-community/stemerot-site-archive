@@ -10,3 +10,5 @@ httrack "https://stemerot.com" \
     "+*.stemerot.com/*" \
     -v \
     -N1 | tee ./stemerot-site-httrack/httrack-logs.txt
+
+exit 0
