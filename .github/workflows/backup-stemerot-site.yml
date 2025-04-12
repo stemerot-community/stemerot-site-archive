@@ -12,9 +12,6 @@ concurrency:
   group: mirror-stemerot-site
   cancel-in-progress: true
 
-permissions:
-  contents: write  # Allows the bot to push commits
-
 jobs:
   mirror-site:
     name: Mirror Stemerot site
@@ -66,6 +63,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: 'website-archives'
+          fetch-depth: 1
 
       - name: Clean repository directory
         run: |
@@ -89,8 +87,8 @@ jobs:
       # Commit
       - name: Commit mirrored site
         run: |
-          git config --global user.name "bot"
-          git config --global user.email "bot@local.me"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Site extracted on $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
           git push origin develop
