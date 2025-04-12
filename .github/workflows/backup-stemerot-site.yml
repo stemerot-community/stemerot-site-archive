@@ -37,12 +37,13 @@ jobs:
       # Step 4: Clean the directory of the previous mirror
       - name: Clean up previous mirror
         run: |
-          rm -rf wget-stemerot-site/*
+          ls
+          pwd
+          ./CLEANUP
 
       # Step 5: Run wget-stemerot-site.sh script to mirror the site
       - name: Run wget-stemerot-site.sh
         run: |
-          chmod +x ./wget-stemerot-site.sh
           ./wget-stemerot-site.sh
 
       # Step 7: Commit changes if any
