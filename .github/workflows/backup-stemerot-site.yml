@@ -91,7 +91,5 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           echo add
           git add .
-          echo commit 
           git commit -m "Site extracted on $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
-          echo push
-          git push origin develop
+          git push origin website-archives
