@@ -36,10 +36,7 @@ jobs:
 
       - name: Run wget-stemerot-site.sh
         run: |
-          mkdir -p wget-stemerot-site
-          echo "File 1" > wget-stemerot-site/file1.txt
-          echo "File 2" > wget-stemerot-site/file2.txt
-      # ./wget-stemerot-site.sh
+          ./wget-stemerot-site.sh
 
       - name: Archive mirrored site
         run: |
@@ -87,7 +84,9 @@ jobs:
           rm -rf stemerot-site-archive.tar.gz
           ls -la
 
-      # Commit
+      # Commit (in order this to work it needs the following code, see above)
+      #     permissions:
+      #       contents: write
       - name: Commit mirrored site
         run: |
           git config --global user.name "github-actions[bot]"
