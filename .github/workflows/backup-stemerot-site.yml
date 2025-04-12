@@ -14,7 +14,7 @@ concurrency:
 
 permissions:
   contents: write  # Allows the bot to push commits
-  
+
 jobs:
   build:
     name: Mirror Stemerot site
@@ -39,18 +39,10 @@ jobs:
       # Step 4: Run wget-stemerot-site.sh script to mirror the site
       - name: Run wget-stemerot-site.sh
         run: |
-          mkdir -p stemerot-site-wget/
-          touch stemerot-site-wget/file1
-          touch stemerot-site-wget/file3
-          touch stemerot-site-wget/file2
-          touch stemerot-site-wget/file4
-          touch wget-logs.txt
-          
-      # ./wget-stemerot-site.sh
+          ./wget-stemerot-site.sh
 
       # Step 5: 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Archive - $(date -u +"%Y-%m-%d %H:%M:%S UTC")
           branch: website-archives
-          token: ${{ secrets.GITHUB_TOKEN }}  # Use the default GitHub Actions token
