@@ -31,44 +31,22 @@ jobs:
       # Step 3: Clean the directory of the previous mirror
       - name: Clean up previous mirror
         run: |
-          ls
-          pwd
           ./CLEANUP
 
       # Step 4: Run wget-stemerot-site.sh script to mirror the site
       - name: Run wget-stemerot-site.sh
         run: |
-          ./wget-stemerot-site.sh
+          mkdir -p stemerot-site-wget/
+          touch stemerot-site-wget/file1
+          touch stemerot-site-wget/file3
+          touch stemerot-site-wget/file2
+          touch stemerot-site-wget/file4
+          touch wget-logs.txt
+          
+      # ./wget-stemerot-site.sh
 
       # Step 5: 
-      - name: Stash changes
-        run: |
-          git stash
-
-      # Step 6: Checkout website-archives branch
-      - name: Checkout website-archives branch
-        run: |
-          git fetch origin website-archives
-          git checkout website-archives
-
-      # Step 7: 
-      - name: Pop changes
-        run: |
-          git stash pop
-          ls
-          pwd
-
-      # Step 8: Commit changes if any
-      - name: Commit changes if any
-        run: |
-          # Get the current date and time in UTC
-          commit_date=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
-          
-          # Stage changes
-          git add .
-          
-          # Commit changes if there are any
-          git diff --cached --quiet || git commit -m "Update mirrored site on $commit_date"
-          
-          # Push changes to the website-archives branch
-          git push origin website-archives
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Archive - $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          branch: website-archives

@@ -1,7 +1,3 @@
 #!/bin/bash
 
-rm -rf \
-    ./stemerot-site-wget/ \
-    ./wget-logs.txt \
-    ./stemerot-site-httrack/ \
-    ./httrack-logs.txt
+rm -rf ./stemerot-site-wget/ ./stemerot-site-httrack/
