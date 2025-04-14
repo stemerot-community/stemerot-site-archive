@@ -105,474 +105,71 @@
 </header>
 
   
-<main class="post-main-section">
+<section class="apps-list-section section-container">
+    <h1>Υπολογιστής BMI</h1>
+    <p>Υπολογισμός Δείκτη Μάζας Σώματος (BMI)</p>
+
+    <br>
     
-    <div class="post-content">
-        <section class="apps-single section-container" style="padding:0;"> 
-        <h1>Υπολογιστής BMI</h1>
-        <p>Υπολογισμός Δείκτη Μάζας Σώματος (BMI)</p>
-        <br>
-        <hr>
-        <div class="app-content">
-            <br>
+    
+    
+    <div class="apps-grid">
+        
+        <div class="app-card">
+            <a href="../quadratic/index.html" class="app-card-link">
+                <h2 class="app-title">Δευτεροβάθμια Εξίσωση</h2>
+                <p class="app-summary">Επίλυση εξίσωσης ax² &#43; bx &#43; c = 0 με υπολογισμό των ριζών</p>
+            </a>
+        </div>
+        
+        <div class="app-card">
+            <a href="../weight-force/index.html" class="app-card-link">
+                <h2 class="app-title">Υπολογισμός Δύναμης Βάρους</h2>
+                <p class="app-summary">Υπολογισμός δύναμης βάρους (Newton) από τη μάζα (kg)</p>
+            </a>
+        </div>
+        
+        <div class="app-card">
+            <a href="index.html" class="app-card-link">
+                <h2 class="app-title">Υπολογιστής BMI</h2>
+                <p class="app-summary">Υπολογισμός BMI από βάρος (kg) και ύψος (m)</p>
+            </a>
+        </div>
+        
+        <div class="app-card">
+            <a href="../lcm/index.html" class="app-card-link">
+                <h2 class="app-title">Ελάχιστο Κοινό Πολλαπλάσιο</h2>
+                <p class="app-summary">Υπολογισμός του ελάχιστου κοινού πολλαπλασίου σε πραγματικό χρόνο</p>
+            </a>
+        </div>
+        
+        <div class="app-card">
+            <a href="../gdc/index.html" class="app-card-link">
+                <h2 class="app-title">Μέγιστος Κοινός Διαιρέτης</h2>
+                <p class="app-summary">Υπολογισμός του μεγαλύτερου κοινού διαιρέτη σε πραγματικό χρόνο</p>
+            </a>
+        </div>
+        
+        <div class="app-card">
+            <a href="../ohms-law/index.html" class="app-card-link">
+                <h2 class="app-title">Νόμος του Ohm</h2>
+                <p class="app-summary">Υπολογισμός του νόμου του Ohm </p>
+            </a>
+        </div>
+        
+        <div class="app-card">
+            <a href="../pythagorean/index.html" class="app-card-link">
+                <h2 class="app-title">Πυθαγόρειο</h2>
+                <p class="app-summary">Υπολογισμός του Πυθαγόρειου Θεωρήματος</p>
+            </a>
+        </div>
+        
+    </div>
+</section>
+
 <br>
-<!-- Description Text -->
-<div style="margin:0 auto; text-align:justify; font-size:0.95rem;">
-  <p>
-    Αυτή η εφαρμογή σας επιτρέπει να υπολογίσετε τον Δείκτη Μάζας Σώματος (BMI) χρησιμοποιώντας το βάρος (σε κιλά) και το ύψος (σε μέτρα). 
-    Ο δείκτης BMI χρησιμοποιείται για την εκτίμηση του κατά πόσο μια μονάδα σωματικής μάζας είναι σε υγιές επίπεδο. 
-    Παρακάτω βλέπετε επίσης έναν πίνακα με τις κατηγορίες που βοηθούν στην ερμηνεία του αποτελέσματος.
-  </p>
-</div>
-<!-- Equation display -->
-<div style="max-width:400px; margin:0 auto; text-align:center;">
-  <p style="font-size:1.1rem; color:#00a1a7;">
-  $$
-     BMI = \frac{weight}{height^2}
-  $$
-  </p>
-  <p style="font-size:1.1rem; color:#00a1a7;">(Βάρος σε kg, Ύψος σε m)</p>
-</div>
-<!-- Calculator Container -->
-<div id="bmi-calculator" class="calculator-container" style="max-width:500px; margin:0 auto;">
-  <div style="margin-bottom:0.8rem;">
-    <label for="bmi-weight" style="display:block; margin-bottom:0.3rem; font-weight:bold; color:#00a1a7;">Βάρος (kg):</label>
-    <input type="number" id="bmi-weight" class="bmi-input" placeholder="Βάρος" step="any"
-           style="width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:4px;" aria-required="true">
-  </div>
-  <div style="margin-bottom:0.8rem;">
-    <label for="bmi-height" style="display:block; margin-bottom:0.3rem; font-weight:bold; color:#00a1a7;">Ύψος (m):</label>
-    <input type="number" id="bmi-height" class="bmi-input" placeholder="Ύψος" step="any"
-           style="width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:4px;" aria-required="true">
-  </div>
-  <!-- Result Display -->
-  <div id="bmi-result" class="component-white-on-dark" role="status" aria-live="polite" style="margin-top:1rem;"></div>
-</div>
-<!-- BMI Interpretation Table -->
-<div style="max-width:500px; margin:1rem auto; overflow-x:auto;">
-  <table style="width:100%; border-collapse:collapse; text-align:center;">
-    <thead>
-      <tr style="background-color:#00a1a7; color:#fff;">
-        <th style="padding:0.5rem; border:1px solid #ccc;">Κατηγορία</th>
-        <th style="padding:0.5rem; border:1px solid #ccc;">BMI</th>
-      </tr>
-    </thead>
-    <tbody style="background-color:#f9f9f9; color:#333;">
-      <tr>
-        <td style="padding:0.5rem; border:1px solid #ccc;">Ελλιποβαρής</td>
-        <td style="padding:0.5rem; border:1px solid #ccc;">&lt; 18.5</td>
-      </tr>
-      <tr>
-        <td style="padding:0.5rem; border:1px solid #ccc;">Κανονικό</td>
-        <td style="padding:0.5rem; border:1px solid #ccc;">18.5 - 24.9</td>
-      </tr>
-      <tr>
-        <td style="padding:0.5rem; border:1px solid #ccc;">Υπέρβαρο</td>
-        <td style="padding:0.5rem; border:1px solid #ccc;">25.0 - 29.9</td>
-      </tr>
-      <tr>
-        <td style="padding:0.5rem; border:1px solid #ccc;">Παχύσαρκος</td>
-        <td style="padding:0.5rem; border:1px solid #ccc;">≥ 30.0</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<script>
-(function(){
-  function updateBMI() {
-    const weight = parseFloat(document.getElementById('bmi-weight').value);
-    const height = parseFloat(document.getElementById('bmi-height').value);
-    const resultDiv = document.getElementById('bmi-result');
-
-    // Clear previous result
-    resultDiv.innerHTML = "";
-
-    if (isNaN(weight) || isNaN(height)) {
-      resultDiv.textContent = "Παρακαλώ εισάγετε και τις δύο τιμές.";
-      return;
-    }
-
-    if (height <= 0) {
-      resultDiv.textContent = "Το ύψος πρέπει να είναι μεγαλύτερο από 0.";
-      return;
-    }
-
-    const bmi = weight / (height * height);
-    resultDiv.innerHTML = `<p>BMI = <span style="color:#00a1a7; font-size:1.2rem;">${bmi.toFixed(2)}</span></p>`;
-  }
-
-  // Attach listeners
-  const inputs = document.querySelectorAll('.bmi-input');
-  inputs.forEach(input => {
-    input.addEventListener('input', updateBMI);
-  });
-})();
-</script>
-<script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-
-        </div>
-        </section>
-    </div>
-
-    
-    <aside class="sidebar">
-        <section class="recent-posts">
-    
-    <section class="latest-podcast-section" style="margin-bottom: 1.5rem;">
-    <div class="podcast-card">
-    <h2>🎙️ Άκουσε τo Podcast μας:</h2>
-      <div class="podcast-info">
-          <h3>"Μετά τι..;"</h3>
-          <p>Όλοι έχουμε φτάσει κάποια στιγμή στην ζωή μας που να νιώσουμε να αναρωτιούμαστε <i>"Μετά τι..;"</i> όταν κλείνει ένας κύκλος.. <br>Μαζί βλέπουμε ιστορίες ανθρώπων και πώς διαχειρίστηκαν από την δική τους ματιά την συγκεκριμένη ερώτηση.</p>
-          <div class="listen-on-container">
-              <a href="https://music.youtube.com/playlist?list=PLlL5Vxco0Eo5zNqPtJPHJ6WFEucS9rNpk" class="listen-on-link" target="_blank" aria-label="Listen on Youtube Music (opens in a new tab)">
-                  <img src="../../img/social/podcasts/ListenonYouTubeMusic-white-SVG.svg" alt="Listen on Youtube Music Icon" class="listen-on-icon">
-              </a>
-              <a href="https://open.spotify.com/show/1GYMIFjNTAyXdvDJPLH0V1?uid=38fb059dba5d14e7da4d&uri=spotify%3Aepisode%3A7daq68M54Ze1nqXHsDUy61" class="listen-on-link" target="_blank" aria-label="Listen on Spotify (opens in a new tab)">
-                  <img src="../../img/social/podcasts/listen-on-spotify.svg" alt="Listen on Spotify Icon" class="listen-on-icon">
-              </a>
-              <a href="https://podcasts.apple.com/gr/podcast/%CE%BC%CE%B5%CF%84%CE%AC-%CF%84%CE%B9/id1798702487" class="listen-on-link" target="_blank" aria-label="Listen on Apple Podcast (opens in a new tab)">
-                  <img src="../../img/social/podcasts/US-UK_Apple_Podcasts_Listen_Badge_RGB_062023.svg" alt="Listen on Apple Podcast Icon" class="listen-on-icon listen-on-apple">
-              </a>
-          </div>
-      </div>
-    </div>
-</section>
-
-    <section class="recent-section">
-        <h2>Ενδιαφέροντα</h2>
-        
-        
-        
-        
-        
-            
-
-<article class="post post-card-effects">
-    
-    
-        <a href="../../posts/engineering/localization/camera-pose-estimation.html" class="post-image-link">
-            <div class="post-image-container">
-                <img src="../../img/banners/ai-eye.webp" alt="Thumbnail: Ένα τύπου cyber μάτι" width="300" height="200">
-                
-                <div class="post-image-overlay"></div>
-                
-                <div class="post-topic-label">
-                    Localization
-                </div>
-            </div>
-        </a>
-    
-
-    
-    <div class="post-info">
-
-        
-        <p class="post-date">
-            🗓️   
-
-
-
-
-
-
-
-
-
-19 Ιαν 2025
-
-            -
-            
-                👤 Χρήστος Σπυριδάκης
-            
-        </p>
-
-        
-        <h3 class="post-title">
-        <a href="../../posts/engineering/localization/camera-pose-estimation.html" class="ancor-style">
-            Χρήση κάμερας για τον υπολογισμό της θέσης
-        </a>
-        </h3>
-
-        
-        
-        <a href="../../posts/engineering/localization/camera-pose-estimation.html" class="ancor-style">
-            <p class="post-summary">Πώς μπορούμε, με μία κάμερα, να εκτιμήσουμε τη θέση μας στον χώρο;</p>
-        </a>
-        
-
-        
-        
-        <div class="post-tags">
-            
-            <a href="../../tags/camera.html" 
-                class="tag ancor-style">
-                #Camera
-            </a>
-            
-            <a href="../../tags/stereo-vision.html" 
-                class="tag ancor-style">
-                #Stereo Vision
-            </a>
-            
-            <a href="../../tags/structure-from-reference.html" 
-                class="tag ancor-style">
-                #Structure from Reference
-            </a>
-            
-        </div>
-        
-
-    </div>
-</article>
-            <br>
-        
-            
-
-<article class="post post-card-effects">
-    
-    
-        <a href="../../posts/engineering/drones/index.html" class="post-image-link">
-            <div class="post-image-container">
-                <img src="../../img/banners/drone-mini.webp" alt="Thumbnail: Ένα μικρό drone" width="300" height="200">
-                
-                <div class="post-image-overlay"></div>
-                
-                <div class="post-topic-label">
-                    Engineering
-                </div>
-            </div>
-        </a>
-    
-
-    
-    <div class="post-info">
-
-        
-        <p class="post-date">
-            🗓️   
-
-
-
-
-
-
-
-
-
-31 Μαρ 2025
-
-            -
-            
-                👤 Χρήστος Σπυριδάκης
-            
-        </p>
-
-        
-        <h3 class="post-title">
-        <a href="../../posts/engineering/drones/index.html" class="ancor-style">
-            Drones: Από Χόμπι σε Εργαλείο
-        </a>
-        </h3>
-
-        
-        
-        <a href="../../posts/engineering/drones/index.html" class="ancor-style">
-            <p class="post-summary">Ποιες είναι οι διάφορες κατηγορίες drones και μπορούν να χρησιμοποιηθούν για κάτι πέρα από τη λήψη βίντεο;</p>
-        </a>
-        
-
-        
-        
-        <div class="post-tags">
-            
-            <a href="../../tags/uav.html" 
-                class="tag ancor-style">
-                #UAV
-            </a>
-            
-            <a href="../../tags/vtol.html" 
-                class="tag ancor-style">
-                #VTOL
-            </a>
-            
-        </div>
-        
-
-    </div>
-</article>
-            <br>
-        
-    </section>
-
-    
-<section class="adsense-section section-container">
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-5957385556386219"
-        data-ad-slot="9876543210"
-        data-ad-format="auto"
-        data-full-width-responsive="true">
-    </ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</section>
-
-    <section class="popular-tags">
-        <h2>🏷️ Δημοφιλή Tags</h2>
-        <div class="tags">
-            
-            
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-            
-            
-            
-            
-                
-                <a href="../../tags/gps.html" class="tag" style="text-decoration: none; color: inherit">
-                    #GPS
-                </a>
-            
-                
-                <a href="../../tags/ansible.html" class="tag" style="text-decoration: none; color: inherit">
-                    #Ansible
-                </a>
-            
-                
-                <a href="../../tags/camera.html" class="tag" style="text-decoration: none; color: inherit">
-                    #Camera
-                </a>
-            
-                
-                <a href="../../tags/ci/cd.html" class="tag" style="text-decoration: none; color: inherit">
-                    #CI/CD
-                </a>
-            
-                
-                <a href="../../tags/devops.html" class="tag" style="text-decoration: none; color: inherit">
-                    #DevOps
-                </a>
-            
-                
-                <a href="../../tags/iac.html" class="tag" style="text-decoration: none; color: inherit">
-                    #IaC
-                </a>
-            
-                
-                <a href="../../tags/linux.html" class="tag" style="text-decoration: none; color: inherit">
-                    #Linux
-                </a>
-            
-                
-                <a href="../../tags/mac.html" class="tag" style="text-decoration: none; color: inherit">
-                    #Mac
-                </a>
-            
-                
-                <a href="../../tags/maths.html" class="tag" style="text-decoration: none; color: inherit">
-                    #Maths
-                </a>
-            
-                
-                <a href="../../tags/multilateration.html" class="tag" style="text-decoration: none; color: inherit">
-                    #Multilateration
-                </a>
-            
-        </div>
-    </section>
-
-    <section class="follow-us-section">
-    <h2 class="follow-us-section-header">🌐 Τα Social μας:</h2>
-    <div class="follow-us-container follow-us-linkedin">
-        <a href="https://www.linkedin.com/company/stemerot/" class="follow-us-link" target="_blank" aria-label="Follow us on LinkedIn (opens in a new tab)">
-            <img src="../../img/social/linkedin-icon.svg" alt="LinkedIn Icon" class="follow-us-icon">
-            <span class="follow-us-text">Follow us on LinkedIn</span>
-        </a>
-    </div>
-    <div class="follow-us-container follow-us-instagram">
-        <a href="https://www.instagram.com/stemerot/" class="follow-us-link" target="_blank" aria-label="Follow us on Instagram (opens in a new tab)">
-            <img src="../../img/social/instagram-icon.svg" alt="Instagram Icon" class="follow-us-icon">
-            <span class="follow-us-text">Follow us on Instagram</span>
-        </a>
-    </div>
-    <div class="follow-us-container follow-us-facebook">
-        <a href="https://www.facebook.com/profile.php?id=100090351596163" class="follow-us-link" target="_blank" aria-label="Follow us on Facebook (opens in a new tab)">
-            <img src="../../img/social/facebook-icon.svg" alt="Facebook Icon" class="follow-us-icon">
-            <span class="follow-us-text">Follow us on Facebook</span>
-        </a>
-    </div>
-    <div class="follow-us-container follow-us-x">
-        <a href="https://x.com/stemerot" class="follow-us-link" target="_blank" aria-label="Follow us on X (opens in a new tab)">
-            <img src="../../img/social/x-icon.svg" alt="X Icon" class="follow-us-icon">
-            <span class="follow-us-text">Follow us on X</span>
-        </a>
-    </div>
-</section>
-
-</section>
-    </aside>
-</main>
-
-
-<section class="adsense-section section-container">
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-5957385556386219"
-        data-ad-slot="9876543210"
-        data-ad-format="auto"
-        data-full-width-responsive="true">
-    </ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</section>
+<br>
+<br>
 
 
 <section class="all-posts-section section-container">
@@ -897,6 +494,24 @@
             τρόπο, ενημερώνει και συμβάλλει στη μείωση του χάσματος μεταξύ αρχαρίων και ειδικών στα πεδία STEM. 
         </p>
     </div>
+</section>
+
+<br>
+<br>
+<br>
+
+
+<section class="adsense-section section-container">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-5957385556386219"
+        data-ad-slot="9876543210"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </section>
 
 
