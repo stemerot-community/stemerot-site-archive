@@ -5,3 +5,6 @@ This repository uses a pipeline to mirror the stemerot.com site once per day.
 
 The extracted content is stored on a different branch titled [website-archives](https://github.com/stemerot-community/stemerot-site-archive/tree/website-archives?tab=readme-ov-file).
 
+---
+
+The original stemerot.com site leverages [Hugo](https://gohugo.io/) and a template codebase that the stemerot uses, is located [here](https://github.com/CSpyridakis/hugo-template).
