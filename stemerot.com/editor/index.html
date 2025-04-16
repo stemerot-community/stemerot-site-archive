@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  
+    <title>Live Post Editor – Stemerot | Ελληνική Κοινότητα για Επιστήμη, Τεχνολογία, Μηχανική και Μαθηματικά</title>
+  
+  <link rel="icon" href="../img/stemerot/stemerot-logo-black-on-white-circle.svg">
+  <meta name="description" content="Stemerot – μια ζωντανή κοινότητα για την επιστήμη, την τεχνολογία και τα μαθηματικά. Ανακαλύψτε, μάθετε και εμπνευστείτε!" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+  
+    <link rel="canonical" href="index.html">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Live Post Editor">
+  <meta property="og:description" content="Stemerot – μια ζωντανή κοινότητα για την επιστήμη, την τεχνολογία και τα μαθηματικά. Ανακαλύψτε, μάθετε και εμπνευστείτε!">
+  <meta property="og:url" content="https://stemerot.com/editor/">
+  <meta property="og:image" content="https://stemerot.com/img/stemerot/stemerot-logo-black-on-white-circle.png">
+
+  
+  <meta name="twitter:title" content="Live Post Editor">
+  <meta name="twitter:description" content="Ελληνική Κοινότητα για Επιστήμη, Τεχνολογία, Μηχανική και Μαθηματικά">
+  <meta name="twitter:image" content="https://stemerot.com/img/stemerot/stemerot-logo-black-on-white-circle.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@stemerot">
+
+  
+  
+  
+  <link rel="stylesheet" href="../css/bundle.min.c0e9e4496c9d99450b4ec99ef5a7bf89ff4d2652fb1ad04131a4ee8732e49d8d.css" integrity="sha256-wOnkSWydmUULTsme9ae/if9NJlL7GtBBMaTuhzLknY0=">
+  
+  
+
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er;
+    s[er] = s[er] || function () {
+      (s[er].q = s[er].q || []).push(arguments)
+    }, s[er].l = 1 * new Date();
+    var a = e.createElement(n),
+        m = e.getElementsByTagName(n)[0];
+    a.async = 1;
+    a.src = d;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('de7476b8262449')
+</script>
+</head>
+<body>
+  
+  <a href="index.html#main-nav" class="skip-link sr-only">Skip to navigation</a>
+  <a href="index.html#main" class="skip-link sr-only">Skip to main content</a>
+  <a href="index.html#footer" class="skip-link sr-only">Skip to footer</a>
+
+  <header class="site-header">
+  <div class="header-container">
+    <a href="../index.html">
+      <div class="logo-wrapper">
+        
+        <div
+          id="site-logo"
+          class="stemerot-logo"
+          role="img"
+          aria-label="Stemerot logo"
+        ></div>
+    
+        
+        <strong class="stemerot-title">Stemerot</strong>
+      </div>
+    </a>
+    
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+    
+    <nav id="main-nav" class="main-nav">
+      <ul>
+        <li><a href="../index.html">Posts</a></li>
+        <li><a href="../topics/index.html">Topics</a></li>
+        <li><a href="../apps/index.html">Apps</a></li>
+        <li><a href="../eshop/index.html">Shop</a></li>
+        <li><a href="../courses/index.html">Courses</a></li>
+        <li><a href="../about/index.html">About</a></li>
+        <li class="mobile-search-container">
+          <div class="search-bar mobile-search">
+              <input class="search-input" type="search" placeholder="🔍 Αναζήτηση..." aria-label="Αναζήτηση" />
+              <div class="search-results"></div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="search-and-toggle">
+      <div class="search-bar desktop-search">
+        <input class="search-input" type="search" placeholder="🔍 Αναζήτηση..." aria-label="Αναζήτηση" />
+        <div class="search-results"></div>
+      </div>
+      
+      <button id="toggle-theme" aria-label="Toggle theme">◐</button>
+    </div>
+  </div>
+</header>
+
+  
+
+<main class="post-main-section" style="display: flex; flex-direction: row; align-items: flex-start; width: 100%; max-width: 100vw; min-height: 100vh;">
+  
+  <div id="render-area" class="post-content" style="width: 75%; padding: 2rem; box-sizing: border-box; overflow-y: auto; border-right: 1px solid #eee;">
+    <p> ✋ Σε αυτόν εδώ τον Editor μπορείς να ετοιμάσεις το άρθρο σου και να μας το στείλεις!</p>
+    <br>
+    <hr>
+    <br>
+
+    <nav class="breadcrumb" style="margin-bottom: 1rem; font-size: 0.9rem;">
+      <a href="../index.html" class="breadcrumb-item breadcrumb-posts">Posts</a>
+      <span class="breadcrumb-separator"> ❯❯ </span>
+      <span class="breadcrumb-item breadcrumb-category" id="breadcrumb-topic">Topic</span>
+      <span class="breadcrumb-separator"> ❯❯ </span>
+      <span class="breadcrumb-item breadcrumb-title" id="breadcrumb-title">Untitled</span>
+    </nav>
+
+    <div id="meta-content">
+      <div class="post-image">
+        <img id="thumbnail-image" src="index.html" alt="Post Thumbnail" style="display:none; max-width: 100%; margin-bottom: 1rem;">
+      </div>
+      <div class="post-summary">
+        <p id="summary-rendered" style="font-style: italic; color: #666; margin-bottom: 1rem;">No summary</p>
+      </div>
+
+      <div class="post-meta">
+        <div class="post-date-readtime">
+          <span class="post-readtime">⌛N min read</span>
+          <span> - </span>
+          <span class="post-date" id="post-date">🗓️</span>
+        </div>
+        <div class="post-share">
+          <h3>Share: </h3>
+          <a href="index.html#" target="_blank" aria-label="Share on Facebook">
+            <img src="../img/social/facebook-icon.svg" alt="Facebook logo">
+          </a>
+          <a href="index.html#" target="_blank" aria-label="Share on X">
+            <img src="../img/social/x-icon.svg" alt="X logo">
+          </a>
+          <a href="index.html#" target="_blank" aria-label="Share on LinkedIn">
+            <img src="../img/social/linkedin-icon.svg" alt="LinkedIn logo">
+          </a>
+        </div>
+      </div>
+
+      <div class="post-tags" id="tags-rendered" style="margin-top: 0.1rem;"></div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <article id="markdown-rendered" class="markdown-body post-content-body" style="max-width: 900px; margin: auto;"></article>
+  </div>
+
+  
+  <aside class="sidebar" style="width: 25%; padding: 2rem; background-color: #f9f9f9; box-sizing: border-box; min-width: 280px; height: 100vh; overflow-y: auto; position: sticky; top: 0;">
+    <h2>✏️ Markdown Editor</h2>
+    <textarea id="markdown-editor" style="width: 100%; height: 300px; padding: 0.5rem; box-sizing: border-box;"></textarea>
+
+    <h3 style="margin-top: 1rem;">📁 Drag & Drop Images</h3>
+    <div id="drop-area" style="border: 2px dashed #ccc; padding: 1rem; min-height: 100px; background: #fff; text-align: center; cursor: pointer;">
+      Drop images here or click to upload.
+      <input type="file" id="file-input" multiple accept="image/*" style="display: none;">
+    </div>
+
+    <h3>📤 Actions</h3>
+    <button id="export-zip-btn" style="margin-top: 0.5rem; padding: 0.5rem; background: #45A1CA; color: white; border: none; cursor: pointer; width: 100%;">
+      💾 Export to ZIP
+    </button>
+    <input type="file" id="import-zip-input" accept=".zip" style="display: none;">
+    <button id="import-zip-btn" style="margin-top: 0.5rem; padding: 0.5rem; background: #FB5052; color: white; border: none; cursor: pointer; width: 100%;">
+      📂 Upload ZIP
+    </button>
+
+    <p>⛔ Διάβασε τους <a href="../contribution-terms.html" style="color:inherit">όρους χρήσης και προϋποθέσεις</a> και μόνο αν είσαι σύμφωνος στείλε μας το άρθρο σου.</p>
+    
+  </aside>
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+  window.initMermaid = () => mermaid.run({ nodes: document.querySelectorAll(".mermaid") });
+</script>
+
+
+<script>
+  const editor = document.getElementById("markdown-editor");
+  const rendered = document.getElementById("markdown-rendered");
+  const imgEl = document.getElementById("thumbnail-image");
+  const summaryEl = document.getElementById("summary-rendered");
+  const breadcrumbTitle = document.getElementById("breadcrumb-title");
+  const breadcrumbTopic = document.getElementById("breadcrumb-topic");
+  const tagsEl = document.getElementById("tags-rendered");
+  const postDateEl = document.getElementById("post-date");
+
+  const dropArea = document.getElementById("drop-area");
+  const fileInput = document.getElementById("file-input");
+  const imageList = document.createElement("ul");
+  imageList.style.listStyle = "none";
+  imageList.style.padding = "0";
+  dropArea.appendChild(imageList);
+
+  let uploadedFiles = {};
+
+  function extractFrontMatter(md) {
+    const frontMatterMatch = md.match(/^---\n([\s\S]*?)\n---/);
+    let frontMatter = {};
+    if (frontMatterMatch) {
+      const fm = frontMatterMatch[1];
+      let currentKey = "";
+      fm.split("\n").forEach(line => {
+        if (line.startsWith("  - ") || line.startsWith("- ")) {
+          if (!frontMatter[currentKey]) frontMatter[currentKey] = [];
+          frontMatter[currentKey].push(line.replace(/^(\s*)- /, "").trim());
+        } else {
+          const [key, ...rest] = line.split(":");
+          if (key && rest.length > 0) {
+            currentKey = key.trim();
+            const val = rest.join(":").trim().replace(/^"|"$/g, "");
+            frontMatter[currentKey] = val;
+          }
+        }
+      });
+    }
+    return frontMatter;
+  }
+
+  function updateMetaFromFrontMatter(fm) {
+    document.title = (fm.title || "Untitled") + " – Stemerot Editor";
+    breadcrumbTitle.textContent = fm.title || "Untitled";
+    breadcrumbTopic.textContent = (fm.topics && fm.topics[0]) || "General";
+    summaryEl.textContent = fm.summary || "No summary";
+
+    if (fm.image) {
+      imgEl.src = fm.image;
+      imgEl.alt = fm.imgAlt || "Post Thumbnail";
+      imgEl.style.display = "block";
+    } else {
+      imgEl.style.display = "none";
+    }
+
+    if (fm.date) {
+      const date = new Date(fm.date);
+      if (!isNaN(date.getTime())) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        postDateEl.textContent = "🗓️ " + date.toLocaleDateString('el-GR', options);
+      }
+    }
+
+    tagsEl.innerHTML = "";
+    if (fm.tags && Array.isArray(fm.tags)) {
+      fm.tags.forEach(tag => {
+        const a = document.createElement("a");
+        a.href = "/tags/" + encodeURIComponent(tag.toLowerCase());
+        a.className = "tag ancor-style";
+        a.style.marginRight = "0.5rem";
+        a.textContent = "#" + tag;
+        tagsEl.appendChild(a);
+      });
+    }
+  }
+
+  function renderMarkdown() {
+    const content = editor.value;
+    const fm = extractFrontMatter(content);
+    updateMetaFromFrontMatter(fm);
+
+    let strippedContent = content.replace(/^---\n([\s\S]*?)\n---/, "").trim();
+
+    strippedContent = strippedContent.replace(/\{\{< figure([^]*?)>\}\}/g, (match, args) => {
+      const src = args.match(/src="([^"]+)"/)?.[1] || "";
+      const alt = args.match(/alt="([^"]*)"/)?.[1] || "";
+      const title = args.match(/title="([^"]*)"/)?.[1] || "";
+      const caption = args.match(/caption="([^"]*)"/)?.[1] || "";
+      if (src && uploadedFiles[src]) {
+        const dataUrl = uploadedFiles[src].url;
+        return `
+          <figure class="custom-figure" style="text-align:center">
+            ${title ? `<div class="figure-title">${title}</div>` : ""}
+            <img src="https://stemerot.com/editor/${dataUrl}" alt="${alt}" style="max-width:80%; margin: auto;">
+            ${caption ? `<figcaption class="figure-caption">${caption}</figcaption>` : ""}
+          </figure>
+        `;
+      }
+      return match;
+    });
+
+    rendered.innerHTML = marked.parse(strippedContent);
+    if (typeof window.initMermaid === "function") window.initMermaid();
+  }
+
+  editor.addEventListener("input", renderMarkdown);
+
+  dropArea.addEventListener("click", () => fileInput.click());
+  dropArea.addEventListener("dragover", (e) => { e.preventDefault(); dropArea.style.borderColor = '#478F6B'; });
+  dropArea.addEventListener("drop", (e) => { e.preventDefault(); handleFiles(e.dataTransfer.files); });
+  fileInput.addEventListener("change", (e) => handleFiles(e.target.files));
+
+  function handleFiles(files) {
+    for (const file of files) {
+      const name = file.name;
+      if (uploadedFiles[name]) continue;
+      const reader = new FileReader();
+      reader.onload = () => {
+        uploadedFiles[name] = { file, url: reader.result };
+        const li = document.createElement("li");
+        li.textContent = name + " ";
+        const btn = document.createElement("button");
+        btn.textContent = "Remove";
+        btn.style.marginLeft = "0.5rem";
+        btn.addEventListener("click", () => {
+          delete uploadedFiles[name];
+          imageList.removeChild(li);
+          renderMarkdown();
+        });
+        li.appendChild(btn);
+        imageList.appendChild(li);
+        renderMarkdown();
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  async function exportZip() {
+    const zip = new JSZip();
+    zip.file("post.md", editor.value);
+    for (const [name, obj] of Object.entries(uploadedFiles)) {
+      zip.file(name, obj.file);
+    }
+    const blob = await zip.generateAsync({ type: "blob" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "submission.zip";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+  document.getElementById("export-zip-btn").addEventListener("click", exportZip);
+
+  document.getElementById("import-zip-btn").addEventListener("click", () => document.getElementById("import-zip-input").click());
+  document.getElementById("import-zip-input").addEventListener("change", async (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+    const zip = await JSZip.loadAsync(file);
+    uploadedFiles = {};
+    imageList.innerHTML = "";
+    zip.forEach(async (relativePath, zipEntry) => {
+      if (zipEntry.name === "post.md") {
+        const content = await zipEntry.async("string");
+        editor.value = content;
+        editor.dispatchEvent(new Event("input"));
+      } else {
+        const blob = await zipEntry.async("blob");
+        const reader = new FileReader();
+        reader.onload = () => {
+          uploadedFiles[zipEntry.name] = { file: new File([blob], zipEntry.name), url: reader.result };
+          const li = document.createElement("li");
+          li.textContent = zipEntry.name + " ";
+          const btn = document.createElement("button");
+          btn.textContent = "Remove";
+          btn.style.marginLeft = "0.5rem";
+          btn.addEventListener("click", () => {
+            delete uploadedFiles[zipEntry.name];
+            imageList.removeChild(li);
+            renderMarkdown();
+          });
+          li.appendChild(btn);
+          imageList.appendChild(li);
+          renderMarkdown();
+        };
+        reader.readAsDataURL(blob);
+      }
+    });
+  });
+
+  editor.dispatchEvent(new Event("input"));
+</script>
+
+
+  <footer id="footer" class="site-footer">
+  <div class="footer-container">
+    <div class="footer-links footer-about-us">
+      <h3>Σχετικά με εμάς</h3>
+      <ul>
+        <li><a href="../about/index.html">Ποιοί είμαστε;</a></li>
+        <li><a href="../authors/index.html">Αρθρογράφοι</a></li>
+        <li><a href="../faq/index.html">FAQ</a></li>
+        <li><a href="index.html">Post Editor</a></li>
+      </ul>
+    </div>
+    <div class="footer-links footer-follow-us-links">
+      <h3>Ακολούθησε μας</h3>
+      <ul class="footer-icons-ul">
+        <li><a href="https://www.linkedin.com/company/stemerot/"><img class="footer-icons" src="../img/social/linkedin-icon.svg" alt="Linkedin icon"/></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100090351596163"><img class="footer-icons" src="../img/social/facebook-icon.svg" alt="Facebook icon"/></a></li>
+        <li><a href="https://x.com/stemerot"><img class="footer-icons" src="../img/social/x-icon.svg" alt="X icon"/></a></li>
+        <li><a href="https://www.instagram.com/stemerot/"><img class="footer-icons" src="../img/social/instagram-icon.svg" alt="Instagram icon"/></a></li>
+        <li><a href="https://open.spotify.com/show/1GYMIFjNTAyXdvDJPLH0V1"><img class="footer-icons" src="../img/social/spotify-icon.svg" alt="Spotify icon"/></a></li>
+        <li><a href="https://discord.gg/M7c22wa7"><img class="footer-icons" src="../img/social/discord-icon.svg" alt="Discord icon"/></a></li>
+        <li><a href="https://www.youtube.com/@stemerot"><img class="footer-icons" src="../img/social/youtube-icon.svg" alt="Youtube icon"/></a></li>
+      </ul>
+    </div>
+    <div class="footer-links footer-communication">
+      <h3>Επικοινωνία</h3>
+      <ul>
+        <li><script type="text/javascript">
+  (function(){
+    var encoded = "aW5mb0BzdGVtZXJvdC5jb20=";
+    var email = atob(encoded);
+    document.write('<a class="color-inherit" href="mailto:' + email + '">' + "Email" + '</a>');
+  })();
+</script>
+<noscript>Email</noscript>
+</li>
+        <li><a href="../privacy-policy.html">Πολιτική Απορρήτου</a></li>
+        <li><a href="../terms-of-usage/index.html">Όροι Χρήσης</a></li>
+        <li><a href="../contribution-terms.html">Όροι Υποβολής Περιεχομένου</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    Stemerot &copy; 2025. All rights reserved.
+    <br>
+    Developed by <script type="text/javascript">
+  (function(){
+    var encoded = "Z3JlaGFzb3B0QGdtYWlsLmNvbQ==";
+    var email = atob(encoded);
+    document.write('<a class="color-inherit" href="mailto:' + email + '">' + "Grehasopt" + '</a>');
+  })();
+</script>
+<noscript>Grehasopt</noscript>
+
+  </div>
+</footer>
+  <div id="cookie-consent-banner" class="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-consent-title" style="display: none;">
+  <h2 id="cookie-consent-title" class="visually-hidden">Cookie Consent</h2>
+  <p>
+    Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας, να εμφανίζουμε εξατομικευμένες διαφημίσεις και να αναλύουμε την κίνηση. 
+    Για περισσότερες λεπτομέρειες σχετικά με τη διαχείριση των προσωπικών σας δεδομένων, καθώς και τους 
+    <a href="../terms-of-usage/index.html" class="color-inherit">Όρους Χρήσης</a> και την 
+    <a href="../privacy-policy.html" class="color-inherit">Πολιτική Απορρήτου</a>, παρακαλούμε διαβάστε τις αντίστοιχες σελίδες. 
+    Σε περίπτωση που συνεχίσετε να χρησιμοποιείτε αυτόν τον ιστότοπο, συμφωνείτε με τους παραπάνω όρους. Εάν δεν συμφωνείτε, παρακαλούμε να εξέλθετε από τη σελίδα.
+  </p>
+  <button id="accept-all-cookies">Αποδοχή όλων</button>
+  <button id="accept-mandatory-cookies">Αποδοχή μόνο των απαραίτητων</button>
+</div>
+
+  
+<script>
+
+
+window.addEventListener('DOMContentLoaded', function() {
+    var cookieConsent = localStorage.getItem('cookieConsent');
+    var banner = document.getElementById('cookie-consent-banner');
+
+    
+    if (!cookieConsent) {
+        banner.style.display = 'block';
+        } else if (cookieConsent === 'accepted-all') {
+           
+        loadGoogleAnalytics();
+        loadGoogleAdSense();
+    }
+});
+
+    
+    document.getElementById('accept-all-cookies').addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'accepted-all');
+    document.getElementById('cookie-consent-banner').style.display = 'none';
+
+    
+    loadGoogleAnalytics();
+    loadGoogleAdSense();
+});
+
+    
+    document.getElementById('accept-mandatory-cookies').addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'accepted-mandatory');
+    document.getElementById('cookie-consent-banner').style.display = 'none';
+
+        
+});
+
+
+
+function loadGoogleAnalytics() {
+    var gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-2JQ9H53HHS';
+    document.head.appendChild(gaScript);
+
+    gaScript.onload = function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-2JQ9H53HHS', { 'anonymize_ip': true });
+    };
+}
+
+
+
+function loadGoogleAdSense() {
+    var adsScript = document.createElement('script');
+    adsScript.async = true;
+    adsScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957385556386219';
+    adsScript.crossorigin = 'anonymous';
+    document.head.appendChild(adsScript);
+}
+</script>
+  <script>
+
+document.getElementById('menu-toggle').addEventListener('click', function () {
+    const nav = document.getElementById('main-nav');
+    nav.classList.toggle('active'); 
+});
+
+
+document.addEventListener('click', function(e) {
+    const nav = document.getElementById('main-nav');
+    const menuToggle = document.getElementById('menu-toggle');
+    
+    if (nav.classList.contains('active') && 
+        !nav.contains(e.target) && 
+        !menuToggle.contains(e.target)) {
+        nav.classList.remove('active');
+    }
+});
+
+let lastScrollPosition = 0;
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+    const currentScrollPosition = window.scrollY;
+
+    if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 100) {
+        
+        header.style.transform = 'translateY(-100%)';
+    } else {
+        
+        header.style.transform = 'translateY(0)';
+    }
+
+    lastScrollPosition = currentScrollPosition;
+});
+</script>
+
+<script>
+
+const themeToggleBtn = document.getElementById("toggle-theme");
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme === "dark") {
+    document.body.classList.add("dark-theme");
+}
+themeToggleBtn.addEventListener("click", function () {
+    document.body.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")) {
+    localStorage.setItem("theme", "dark");
+    } else {
+    localStorage.setItem("theme", "light");
+    }
+});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  
+  const searchInputs = document.querySelectorAll(".search-input");
+  if (searchInputs.length === 0) return;
+
+  
+  fetch("/index.json")
+    .then(response => response.json())
+    .then(data => {
+      const options = {
+        keys: ['title', 'summary', 'description', 'category', 'content'],
+        includeScore: true,
+        includeMatches: true,
+        threshold: 0.3,            
+        ignoreLocation: true,      
+        findAllMatches: true,      
+        minMatchCharLength: 2      
+      };
+      const fuse = new Fuse(data, options);
+
+      
+      function handleSearchInput(e) {
+        const input = e.target;
+        
+        const resultsContainer = input.nextElementSibling;
+        if (!resultsContainer) return;  
+
+        const query = input.value.trim().toLowerCase();
+        resultsContainer.innerHTML = "";
+        if (query.length < 2) {
+          resultsContainer.style.display = "none";
+          return;
+        }
+        resultsContainer.style.display = "block";
+        resultsContainer.style.width = "400px"; 
+
+        const fuseResults = fuse.search(query);
+
+        
+        fuseResults.slice(0, 5).forEach(result => {
+          const item = result.item;
+          let snippetHTML = "";
+          if (result.matches && Array.isArray(result.matches)) {
+            for (const match of result.matches) {
+              if (match.indices && match.indices.length > 0) {
+                const fieldName = match.key;
+                const fieldText = item[fieldName] || "";
+                if (fieldText) {
+                  const [start, end] = match.indices[0];
+                  const contextBefore = 30;
+                  const contextAfter = 30;
+                  const snippetStart = Math.max(0, start - contextBefore);
+                  const snippetEnd = Math.min(fieldText.length, end + contextAfter);
+                  let snippet = fieldText.substring(snippetStart, snippetEnd);
+                  if (snippetStart > 0) {
+                    snippet = "..." + snippet;
+                  }
+                  if (snippetEnd < fieldText.length) {
+                    snippet = snippet + "...";
+                  }
+                  const matchText = fieldText
+                    .substring(start, end + 1)
+                    .replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                  const regexHighlight = new RegExp("(" + matchText + ")", "gi");
+                  snippetHTML = snippet.replace(regexHighlight, "<strong>$1</strong>");
+                  break; 
+                }
+              }
+            }
+          }
+          
+          const div = document.createElement("div");
+          div.style.marginBottom = "1rem";
+          div.innerHTML = `
+            <a href="https://stemerot.com/editor/${item.url}" style="text-decoration: none;">
+              <strong style="color:#000">${item.title}</strong>
+              <div style="font-size: 0.8rem; font-weight: normal; color: #444; margin-top: 0.25rem;">
+                ${snippetHTML}
+              </div>
+            </a>
+          `;
+          resultsContainer.appendChild(div);
+        });
+        
+        if (fuseResults.length === 0) {
+          resultsContainer.innerHTML = "<p style=\"color:#333\">Δεν βρέθηκαν αποτελέσματα.</p>";
+        }
+      }
+      
+      
+      searchInputs.forEach(input => {
+        input.addEventListener("input", handleSearchInput);
+        input.addEventListener("focus", function(){
+          if (input.value.trim().length >= 2) {
+            const resultsContainer = input.nextElementSibling;
+            if (resultsContainer) resultsContainer.style.display = "block";
+          }
+        });
+      });
+      
+      
+      document.addEventListener("click", function(e) {
+        searchInputs.forEach(input => {
+          const resultsContainer = input.nextElementSibling;
+          if (resultsContainer && !input.contains(e.target) && !resultsContainer.contains(e.target)) {
+            resultsContainer.style.display = "none";
+          }
+        });
+      });
+    })
+    .catch(err => console.error("Error loading search index:", err));
+});
+</script>
+
+</body>
+</html>

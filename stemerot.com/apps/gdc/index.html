@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  
+    <title>Μέγιστος Κοινός Διαιρέτης – Stemerot | Ελληνική Κοινότητα για Επιστήμη, Τεχνολογία, Μηχανική και Μαθηματικά</title>
+  
+  <link rel="icon" href="../../img/stemerot/stemerot-logo-black-on-white-circle.svg">
+  <meta name="description" content="Εφαρμογή υπολογισμού του μεγαλύτερου κοινού διαιρέτη για 2 ή περισσότερους αριθμούς" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+  
+    <link rel="canonical" href="index.html">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Μέγιστος Κοινός Διαιρέτης">
+  <meta property="og:description" content="Εφαρμογή υπολογισμού του μεγαλύτερου κοινού διαιρέτη για 2 ή περισσότερους αριθμούς">
+  <meta property="og:url" content="https://stemerot.com/apps/gdc/">
+  <meta property="og:image" content="https://stemerot.com/img/stemerot/stemerot-logo-black-on-white-circle.png">
+
+  
+  <meta name="twitter:title" content="Μέγιστος Κοινός Διαιρέτης">
+  <meta name="twitter:description" content="Ελληνική Κοινότητα για Επιστήμη, Τεχνολογία, Μηχανική και Μαθηματικά">
+  <meta name="twitter:image" content="https://stemerot.com/img/stemerot/stemerot-logo-black-on-white-circle.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@stemerot">
+
+  
+  
+  
+  <link rel="stylesheet" href="../../css/bundle.min.c0e9e4496c9d99450b4ec99ef5a7bf89ff4d2652fb1ad04131a4ee8732e49d8d.css" integrity="sha256-wOnkSWydmUULTsme9ae/if9NJlL7GtBBMaTuhzLknY0=">
+  
+  
+
+  <script>
+  (function (s, e, n, d, er) {
+    s['Sender'] = er;
+    s[er] = s[er] || function () {
+      (s[er].q = s[er].q || []).push(arguments)
+    }, s[er].l = 1 * new Date();
+    var a = e.createElement(n),
+        m = e.getElementsByTagName(n)[0];
+    a.async = 1;
+    a.src = d;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
+  sender('de7476b8262449')
+</script>
+</head>
+<body>
+  
+  <a href="index.html#main-nav" class="skip-link sr-only">Skip to navigation</a>
+  <a href="index.html#main" class="skip-link sr-only">Skip to main content</a>
+  <a href="index.html#footer" class="skip-link sr-only">Skip to footer</a>
+
+  <header class="site-header">
+  <div class="header-container">
+    <a href="../../index.html">
+      <div class="logo-wrapper">
+        
+        <div
+          id="site-logo"
+          class="stemerot-logo"
+          role="img"
+          aria-label="Stemerot logo"
+        ></div>
+    
+        
+        <strong class="stemerot-title">Stemerot</strong>
+      </div>
+    </a>
+    
+    <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+    
+    <nav id="main-nav" class="main-nav">
+      <ul>
+        <li><a href="../../index.html">Posts</a></li>
+        <li><a href="../../topics/index.html">Topics</a></li>
+        <li><a href="../index.html">Apps</a></li>
+        <li><a href="../../eshop/index.html">Shop</a></li>
+        <li><a href="../../courses/index.html">Courses</a></li>
+        <li><a href="../../about/index.html">About</a></li>
+        <li class="mobile-search-container">
+          <div class="search-bar mobile-search">
+              <input class="search-input" type="search" placeholder="🔍 Αναζήτηση..." aria-label="Αναζήτηση" />
+              <div class="search-results"></div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="search-and-toggle">
+      <div class="search-bar desktop-search">
+        <input class="search-input" type="search" placeholder="🔍 Αναζήτηση..." aria-label="Αναζήτηση" />
+        <div class="search-results"></div>
+      </div>
+      
+      <button id="toggle-theme" aria-label="Toggle theme">◐</button>
+    </div>
+  </div>
+</header>
+
+  
+<main class="post-main-section">
+    
+    <div class="post-content">
+        <section class="apps-single section-container" style="padding:0;"> 
+        <h1>Μέγιστος Κοινός Διαιρέτης</h1>
+        <p>Εφαρμογή υπολογισμού του μεγαλύτερου κοινού διαιρέτη για 2 ή περισσότερους αριθμούς</p>
+        <br>
+        <hr>
+        <div class="app-content">
+            <br>
+<br>
+<p>Παρακάτω μπορείτε να εισάγετε 2 ή περισσότερους αριθμούς. Χρησιμοποιήστε τα κουμπιά για να προσθέσετε ή να αφαιρέσετε πεδία. Καθώς εισάγετε τους αριθμούς, υπολογίζεται αυτόματα ο μέγιστος κοινός διαιρέτης (εάν υπάρχει) και εμφανίζονται οι θετικοί διαιρέτες κάθε αριθμού.</p>
+<!-- Calculator Container -->
+<div id="gcd-calculator" class="calculator-container">
+  <!-- Input Fields Container -->
+  <div id="input-fields">
+    <div class="number-input" style="margin-bottom:0.8rem;">
+      <label style="display:block; margin-bottom:0.3rem; font-weight:bold; color:#00a1a7;">Αριθμός 1:</label>
+      <input type="number" class="gcd-input" placeholder="Δώστε αριθμό" step="1" 
+             style="width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:4px;">
+    </div>
+    <div class="number-input" style="margin-bottom:0.8rem;">
+      <label style="display:block; margin-bottom:0.3rem; font-weight:bold; color:#00a1a7;">Αριθμός 2:</label>
+      <input type="number" class="gcd-input" placeholder="Δώστε αριθμό" step="1" 
+             style="width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:4px;">
+    </div>
+  </div>
+  <!-- Buttons to add or remove an input field -->
+  <div style="display:flex; gap:1rem; margin-bottom:1rem;">
+    <button id="addNumber" style="flex:1; padding:0.7rem; background-color:#00a1a7; color:#fff; border:none; border-radius:4px; cursor:pointer;">
+      Προσθήκη Αριθμού
+    </button>
+    <button id="removeNumber" style="flex:1; padding:0.7rem; background-color:#ff4444; color:#fff; border:none; border-radius:4px; cursor:pointer;">
+      Αφαίρεση Αριθμού
+    </button>
+  </div>
+  <!-- Display of overall result -->
+  <div id="result" class="component-white-on-dark" role="status" aria-live="polite"></div>
+  <!-- Display of each number's divisors -->
+  <div id="divisors-display" style="margin-top:1rem; font-size:0.9rem;"></div>
+</div>
+<script>
+(function(){
+  // Utility function: returns sorted array of positive divisors for a given positive integer n.
+  function getDivisors(n) {
+    n = Math.abs(n);
+    if (n === 0) return [];
+    let divisors = [];
+    for (let i = 1; i <= Math.sqrt(n); i++) {
+      if (n % i === 0) {
+        divisors.push(i);
+        if (i !== n / i) {
+          divisors.push(n / i);
+        }
+      }
+    }
+    return divisors.sort((a, b) => a - b);
+  }
+
+  // Returns the intersection of multiple arrays.
+  function intersectArrays(arrays) {
+    if (arrays.length === 0) return [];
+    return arrays.reduce((a, b) => a.filter(c => b.includes(c)));
+  }
+
+  // Update the calculation when any input changes.
+  function updateCalculation() {
+    const inputs = Array.from(document.querySelectorAll('.gcd-input'));
+    const divisorsDisplay = document.getElementById('divisors-display');
+    const resultDisplay = document.getElementById('result');
+    
+    // Reset displays.
+    divisorsDisplay.innerHTML = "";
+    resultDisplay.textContent = "";
+
+    // Collect valid positive numbers.
+    const numbers = [];
+    inputs.forEach((input, index) => {
+      const value = parseInt(input.value, 10);
+      if (!isNaN(value) && value > 0) {
+        numbers.push({num: value, index});
+      }
+    });
+    
+    // If not all inputs are filled with a positive number, display a message.
+    if (numbers.length < inputs.length) {
+      resultDisplay.textContent = "Παρακαλώ συμπληρώστε όλους τους αριθμούς (θετικές τιμές).";
+      return;
+    }
+    
+    // Compute and display divisors for each number.
+    let allDivisors = [];
+    numbers.forEach(item => {
+      const divisors = getDivisors(item.num);
+      allDivisors.push(divisors);
+      
+      // Map each divisor to a string.
+      const divisorsHTML = divisors.map(div => div).join(', ');
+      divisorsDisplay.innerHTML += `<p style="color:#000" class="component-white-on-dark">Διαιρέτες του αριθμού ${item.num}: ${divisorsHTML}</p>`;
+    });
+
+    // Compute common divisors.
+    const commonDivisors = intersectArrays(allDivisors);
+    if (commonDivisors.length > 0) {
+      // Greatest common divisor is the maximum element.
+      const gcdValue = Math.max(...commonDivisors);
+      resultDisplay.innerHTML = `<p>Μέγιστος Κοινός Διαιρέτης: <span style="color:#00a1a7; font-size:1.2rem;">${gcdValue}</span></p>`;
+      
+      // Now, update each displayed divisors paragraph to highlight the gcd if it exists.
+      // We assume the paragraphs are in the same order as numbers.
+      const paragraphs = divisorsDisplay.querySelectorAll('p');
+      numbers.forEach((item, idx) => {
+        const divisors = getDivisors(item.num);
+        const divisorsHTML = divisors.map(div => {
+          return (div === gcdValue) ? `<span style="color:#00a1a7; font-weight:bold;">${div}</span>` : div;
+        }).join(', ');
+        paragraphs[idx].innerHTML = `Διαιρέτες του αριθμού ${item.num}: ${divisorsHTML}`;
+      });
+    } else {
+      resultDisplay.textContent = "Δεν υπάρχει κοινός διαιρέτης.";
+    }
+  }
+
+  // Attach event listeners to all current and future .gcd-input fields.
+  function attachInputListeners() {
+    const inputs = document.querySelectorAll('.gcd-input');
+    inputs.forEach(input => {
+      input.removeEventListener('input', updateCalculation);
+      input.addEventListener('input', updateCalculation);
+    });
+  }
+
+  // Button to add a new input field.
+  document.getElementById('addNumber').addEventListener('click', function() {
+    const inputFields = document.getElementById('input-fields');
+    const count = inputFields.children.length + 1;
+    const newDiv = document.createElement('div');
+    newDiv.className = "number-input";
+    newDiv.style.marginBottom = "0.8rem";
+    newDiv.innerHTML = `<label style="display:block; margin-bottom:0.3rem; font-weight:bold; color:#00a1a7;">Αριθμός ${count}:</label>
+                        <input type="number" class="gcd-input" placeholder="Δώστε αριθμό" step="1" 
+                               style="width:100%; padding:0.5rem; border:1px solid #ccc; border-radius:4px;">`;
+    inputFields.appendChild(newDiv);
+    attachInputListeners();
+    updateCalculation();
+  });
+
+  // Button to remove the last input field (only if more than 2 remain).
+  document.getElementById('removeNumber').addEventListener('click', function() {
+    const inputFields = document.getElementById('input-fields');
+    if (inputFields.children.length > 2) {
+      inputFields.removeChild(inputFields.lastElementChild);
+      attachInputListeners();
+      updateCalculation();
+    }
+  });
+
+  // Initial listeners.
+  attachInputListeners();
+})();
+</script>
+
+        </div>
+        </section>
+    </div>
+
+    
+    <aside class="sidebar">
+        <section class="recent-posts">
+    
+    <section class="latest-podcast-section" style="margin-bottom: 1.5rem;">
+    <div class="podcast-card">
+    <h2>🎙️ Άκουσε τo Podcast μας:</h2>
+      <div class="podcast-info">
+          <h3>"Μετά τι..;"</h3>
+          <p>Όλοι έχουμε φτάσει κάποια στιγμή στην ζωή μας που να νιώσουμε να αναρωτιούμαστε <i>"Μετά τι..;"</i> όταν κλείνει ένας κύκλος.. <br>Μαζί βλέπουμε ιστορίες ανθρώπων και πώς διαχειρίστηκαν από την δική τους ματιά την συγκεκριμένη ερώτηση.</p>
+          <div class="listen-on-container">
+              <a href="https://music.youtube.com/playlist?list=PLlL5Vxco0Eo5zNqPtJPHJ6WFEucS9rNpk" class="listen-on-link" target="_blank" aria-label="Listen on Youtube Music (opens in a new tab)">
+                  <img src="../../img/social/podcasts/ListenonYouTubeMusic-white-SVG.svg" alt="Listen on Youtube Music Icon" class="listen-on-icon">
+              </a>
+              <a href="https://open.spotify.com/show/1GYMIFjNTAyXdvDJPLH0V1?uid=38fb059dba5d14e7da4d&uri=spotify%3Aepisode%3A7daq68M54Ze1nqXHsDUy61" class="listen-on-link" target="_blank" aria-label="Listen on Spotify (opens in a new tab)">
+                  <img src="../../img/social/podcasts/listen-on-spotify.svg" alt="Listen on Spotify Icon" class="listen-on-icon">
+              </a>
+              <a href="https://podcasts.apple.com/gr/podcast/%CE%BC%CE%B5%CF%84%CE%AC-%CF%84%CE%B9/id1798702487" class="listen-on-link" target="_blank" aria-label="Listen on Apple Podcast (opens in a new tab)">
+                  <img src="../../img/social/podcasts/US-UK_Apple_Podcasts_Listen_Badge_RGB_062023.svg" alt="Listen on Apple Podcast Icon" class="listen-on-icon listen-on-apple">
+              </a>
+          </div>
+      </div>
+    </div>
+</section>
+
+    <section class="recent-section">
+        <h2>Ενδιαφέροντα</h2>
+        
+        
+        
+        
+        
+            
+
+<article class="post post-card-effects">
+    
+    
+        <a href="../../posts/engineering/localization/localization-algorithms.html" class="post-image-link">
+            <div class="post-image-container">
+                <img src="../../img/banners/person-holding-compase.webp" alt="Thumbnail: Ένα χέρι που κρατάει μία πυξίδα" width="300" height="200">
+                
+                <div class="post-image-overlay"></div>
+                
+                <div class="post-topic-label">
+                    Localization
+                </div>
+            </div>
+        </a>
+    
+
+    
+    <div class="post-info">
+
+        
+        <p class="post-date">
+            🗓️   
+
+
+
+
+
+
+
+
+
+18 Ιαν 2025
+
+            -
+            
+                👤 Χρήστος Σπυριδάκης
+            
+        </p>
+
+        
+        <h3 class="post-title">
+        <a href="../../posts/engineering/localization/localization-algorithms.html" class="ancor-style">
+            Αλγόριθμοι σχετικά με τον υπολογισμό θέσης αντικειμένων
+        </a>
+        </h3>
+
+        
+        
+        <a href="../../posts/engineering/localization/localization-algorithms.html" class="ancor-style">
+            <p class="post-summary">Λεπτομέρειες των αλγορίθμων που χρησιμοποιούμε για τον υπολογισμό της θέσης ενός αντικειμένου στον 3D χώρο.</p>
+        </a>
+        
+
+        
+        
+        <div class="post-tags">
+            
+            <a href="../../tags/gps.html" 
+                class="tag ancor-style">
+                #GPS
+            </a>
+            
+        </div>
+        
+
+    </div>
+</article>
+            <br>
+        
+            
+
+<article class="post post-card-effects">
+    
+    
+        <a href="../../posts/engineering/localization/localization-system.html" class="post-image-link">
+            <div class="post-image-container">
+                <img src="../../img/banners/global-map.webp" alt="Thumbnail: Ένας παγκόσμιος χάρτης" width="300" height="200">
+                
+                <div class="post-image-overlay"></div>
+                
+                <div class="post-topic-label">
+                    Localization
+                </div>
+            </div>
+        </a>
+    
+
+    
+    <div class="post-info">
+
+        
+        <p class="post-date">
+            🗓️   
+
+
+
+
+
+
+
+
+
+15 Ιαν 2025
+
+            -
+            
+                👤 Χρήστος Σπυριδάκης
+            
+        </p>
+
+        
+        <h3 class="post-title">
+        <a href="../../posts/engineering/localization/localization-system.html" class="ancor-style">
+            Μα καλά, πώς δουλεύει το GPS;
+        </a>
+        </h3>
+
+        
+        
+        <a href="../../posts/engineering/localization/localization-system.html" class="ancor-style">
+            <p class="post-summary">Καθημερινά χρησιμοποιούμε εφαρμογές όπως το Gmaps για να μετακινηθούμε από το ένα σημείο στο άλλο. Πώς, όμως, λειτουργεί αυτό;</p>
+        </a>
+        
+
+        
+        
+        <div class="post-tags">
+            
+            <a href="../../tags/gps.html" 
+                class="tag ancor-style">
+                #GPS
+            </a>
+            
+        </div>
+        
+
+    </div>
+</article>
+            <br>
+        
+    </section>
+
+    
+<section class="adsense-section section-container">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-5957385556386219"
+        data-ad-slot="9876543210"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</section>
+
+    <section class="popular-tags">
+        <h2>🏷️ Δημοφιλή Tags</h2>
+        <div class="tags">
+            
+            
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            
+            
+            
+            
+                
+                <a href="../../tags/gps.html" class="tag" style="text-decoration: none; color: inherit">
+                    #GPS
+                </a>
+            
+                
+                <a href="../../tags/ansible.html" class="tag" style="text-decoration: none; color: inherit">
+                    #Ansible
+                </a>
+            
+                
+                <a href="../../tags/camera.html" class="tag" style="text-decoration: none; color: inherit">
+                    #Camera
+                </a>
+            
+                
+                <a href="../../tags/ci/cd.html" class="tag" style="text-decoration: none; color: inherit">
+                    #CI/CD
+                </a>
+            
+                
+                <a href="../../tags/devops.html" class="tag" style="text-decoration: none; color: inherit">
+                    #DevOps
+                </a>
+            
+                
+                <a href="../../tags/iac.html" class="tag" style="text-decoration: none; color: inherit">
+                    #IaC
+                </a>
+            
+                
+                <a href="../../tags/linux.html" class="tag" style="text-decoration: none; color: inherit">
+                    #Linux
+                </a>
+            
+                
+                <a href="../../tags/mac.html" class="tag" style="text-decoration: none; color: inherit">
+                    #Mac
+                </a>
+            
+                
+                <a href="../../tags/maths.html" class="tag" style="text-decoration: none; color: inherit">
+                    #Maths
+                </a>
+            
+                
+                <a href="../../tags/multilateration.html" class="tag" style="text-decoration: none; color: inherit">
+                    #Multilateration
+                </a>
+            
+        </div>
+    </section>
+
+    <section class="follow-us-section">
+    <h2 class="follow-us-section-header">🌐 Τα Social μας:</h2>
+    <div class="follow-us-container follow-us-linkedin">
+        <a href="https://www.linkedin.com/company/stemerot/" class="follow-us-link" target="_blank" aria-label="Follow us on LinkedIn (opens in a new tab)">
+            <img src="../../img/social/linkedin-icon.svg" alt="LinkedIn Icon" class="follow-us-icon">
+            <span class="follow-us-text">Follow us on LinkedIn</span>
+        </a>
+    </div>
+    <div class="follow-us-container follow-us-instagram">
+        <a href="https://www.instagram.com/stemerot/" class="follow-us-link" target="_blank" aria-label="Follow us on Instagram (opens in a new tab)">
+            <img src="../../img/social/instagram-icon.svg" alt="Instagram Icon" class="follow-us-icon">
+            <span class="follow-us-text">Follow us on Instagram</span>
+        </a>
+    </div>
+    <div class="follow-us-container follow-us-facebook">
+        <a href="https://www.facebook.com/profile.php?id=100090351596163" class="follow-us-link" target="_blank" aria-label="Follow us on Facebook (opens in a new tab)">
+            <img src="../../img/social/facebook-icon.svg" alt="Facebook Icon" class="follow-us-icon">
+            <span class="follow-us-text">Follow us on Facebook</span>
+        </a>
+    </div>
+    <div class="follow-us-container follow-us-x">
+        <a href="https://x.com/stemerot" class="follow-us-link" target="_blank" aria-label="Follow us on X (opens in a new tab)">
+            <img src="../../img/social/x-icon.svg" alt="X Icon" class="follow-us-icon">
+            <span class="follow-us-text">Follow us on X</span>
+        </a>
+    </div>
+</section>
+
+</section>
+    </aside>
+</main>
+
+
+<section class="adsense-section section-container">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-5957385556386219"
+        data-ad-slot="9876543210"
+        data-ad-format="auto"
+        data-full-width-responsive="true">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</section>
+
+
+<section class="all-posts-section section-container">
+    <h2>Πρόσφατα Άρθρα</h2>
+    <div class="all-posts-grid">
+        
+        
+        
+            <article class="post post-card-effects">
+                <a href="../../posts/engineering/drones/index.html">
+                    <div class="post-image-container">
+                        <img src="../../img/banners/drone-mini.webp" alt="Thumbnail: Ένα μικρό drone">
+                        
+                        <div class="post-image-overlay"></div>
+                        
+                        <div class="post-topic-label">
+
+                            
+                            Engineering
+                            
+                        </div>
+                    </div>
+                </a>
+                <div class="post-info">
+                    <p class="post-date">
+                        🗓️   
+
+
+
+
+
+
+
+
+
+31 Μαρ 2025
+
+                        -
+                        
+                            👤 Χρήστος Σπυριδάκης
+                        
+                    </p>
+                    <a href="../../posts/engineering/drones/index.html" class="ancor-style">
+                        <h3 class="post-title">Drones: Από Χόμπι σε Εργαλείο</h3>
+                        <p class="post-summary">Ποιες είναι οι διάφορες κατηγορίες drones και μπορούν να χρησιμοποιηθούν για κάτι πέρα από τη λήψη βίντεο;</p>
+                    </a>
+                    <div class="post-tags">
+                        
+                        <a href="../../tags/uav.html" class="tag ancor-style">#UAV</a>
+                        
+                        <a href="../../tags/vtol.html" class="tag ancor-style">#VTOL</a>
+                        
+                    </div>
+                </div>
+            </article>
+        
+            <article class="post post-card-effects">
+                <a href="../../posts/engineering/automation/automation/index.html">
+                    <div class="post-image-container">
+                        <img src="../../img/banners/automation-tools.webp" alt="Thumbnail: A laptop displaying various automation tools, such as Ansible, Terraform, and Jenkins.">
+                        
+                        <div class="post-image-overlay"></div>
+                        
+                        <div class="post-topic-label">
+
+                            
+                            Automation
+                            
+                        </div>
+                    </div>
+                </a>
+                <div class="post-info">
+                    <p class="post-date">
+                        🗓️   
+
+
+
+
+
+
+
+
+
+31 Μαρ 2025
+
+                        -
+                        
+                            👤 Χρήστος Σπυριδάκης
+                        
+                    </p>
+                    <a href="../../posts/engineering/automation/automation/index.html" class="ancor-style">
+                        <h3 class="post-title">Η εποχή του αυτοματισμού θα φέρει αλλαγές</h3>
+                        <p class="post-summary">Πόσο σημαντική είναι η έννοια του αυτοματισμού διαδικασιών στις τεχνολογίες που χρησιμοποιούμε σήμερα;</p>
+                    </a>
+                    <div class="post-tags">
+                        
+                        <a href="../../tags/devops.html" class="tag ancor-style">#DevOps</a>
+                        
+                        <a href="../../tags/terraform.html" class="tag ancor-style">#Terraform</a>
+                        
+                        <a href="../../tags/ansible.html" class="tag ancor-style">#Ansible</a>
+                        
+                        <a href="../../tags/ci/cd.html" class="tag ancor-style">#CI/CD</a>
+                        
+                        <a href="../../tags/iac.html" class="tag ancor-style">#IaC</a>
+                        
+                    </div>
+                </div>
+            </article>
+        
+            <article class="post post-card-effects">
+                <a href="../../posts/science/music-and-math/index.html">
+                    <div class="post-image-container">
+                        <img src="../../img/banners/piano-img.webp" alt="Thumbnail: Ένα πιάνο">
+                        
+                        <div class="post-image-overlay"></div>
+                        
+                        <div class="post-topic-label">
+
+                            
+                            Science
+                            
+                        </div>
+                    </div>
+                </a>
+                <div class="post-info">
+                    <p class="post-date">
+                        🗓️   
+
+
+
+
+
+
+
+
+
+13 Φεβ 2025
+
+                        -
+                        
+                            👤 Μαρία Ευαγγελινού
+                        
+                    </p>
+                    <a href="../../posts/science/music-and-math/index.html" class="ancor-style">
+                        <h3 class="post-title">Είναι τελικά η Μουσική η αριθμητική των ήχων;</h3>
+                        <p class="post-summary">Μπορούν τα μαθηματικά να εξηγήσουν άραγε την μουσική; Είναι η μουσική μία εξίσωση μαθηματικών;</p>
+                    </a>
+                    <div class="post-tags">
+                        
+                        <a href="../../tags/music.html" class="tag ancor-style">#Music</a>
+                        
+                        <a href="../../tags/maths.html" class="tag ancor-style">#Maths</a>
+                        
+                    </div>
+                </div>
+            </article>
+        
+            <article class="post post-card-effects">
+                <a href="../../posts/technology/os/pc-vs-mac-vs-linux/index.html">
+                    <div class="post-image-container">
+                        <img src="../../img/banners/laptop-and-code.webp" alt="Thumbnail: Ένα laptop με κώδικα στην οθόνη του">
+                        
+                        <div class="post-image-overlay"></div>
+                        
+                        <div class="post-topic-label">
+
+                            
+                            Technology
+                            
+                        </div>
+                    </div>
+                </a>
+                <div class="post-info">
+                    <p class="post-date">
+                        🗓️   
+
+
+
+
+
+
+
+
+
+20 Ιαν 2025
+
+                        -
+                        
+                            👤 Χρήστος Σπυριδάκης
+                        
+                    </p>
+                    <a href="../../posts/technology/os/pc-vs-mac-vs-linux/index.html" class="ancor-style">
+                        <h3 class="post-title">Η μεγάλη μάχη των λειτουργικών συστημάτων</h3>
+                        <p class="post-summary">Ποιο λειτουργικό είναι καλύτερο να χρησιμοποιείς;</p>
+                    </a>
+                    <div class="post-tags">
+                        
+                        <a href="../../tags/os.html" class="tag ancor-style">#OS</a>
+                        
+                        <a href="../../tags/mac.html" class="tag ancor-style">#Mac</a>
+                        
+                        <a href="../../tags/linux.html" class="tag ancor-style">#Linux</a>
+                        
+                        <a href="../../tags/windows.html" class="tag ancor-style">#Windows</a>
+                        
+                    </div>
+                </div>
+            </article>
+        
+            <article class="post post-card-effects">
+                <a href="../../posts/engineering/localization/camera-pose-estimation.html">
+                    <div class="post-image-container">
+                        <img src="../../img/banners/ai-eye.webp" alt="Thumbnail: Ένα τύπου cyber μάτι">
+                        
+                        <div class="post-image-overlay"></div>
+                        
+                        <div class="post-topic-label">
+
+                            
+                            Localization
+                            
+                        </div>
+                    </div>
+                </a>
+                <div class="post-info">
+                    <p class="post-date">
+                        🗓️   
+
+
+
+
+
+
+
+
+
+19 Ιαν 2025
+
+                        -
+                        
+                            👤 Χρήστος Σπυριδάκης
+                        
+                    </p>
+                    <a href="../../posts/engineering/localization/camera-pose-estimation.html" class="ancor-style">
+                        <h3 class="post-title">Χρήση κάμερας για τον υπολογισμό της θέσης</h3>
+                        <p class="post-summary">Πώς μπορούμε, με μία κάμερα, να εκτιμήσουμε τη θέση μας στον χώρο;</p>
+                    </a>
+                    <div class="post-tags">
+                        
+                        <a href="../../tags/camera.html" class="tag ancor-style">#Camera</a>
+                        
+                        <a href="../../tags/stereo-vision.html" class="tag ancor-style">#Stereo Vision</a>
+                        
+                        <a href="../../tags/structure-from-reference.html" class="tag ancor-style">#Structure from Reference</a>
+                        
+                    </div>
+                </div>
+            </article>
+        
+            <article class="post post-card-effects">
+                <a href="../../posts/engineering/localization/localization-algorithms.html">
+                    <div class="post-image-container">
+                        <img src="../../img/banners/person-holding-compase.webp" alt="Thumbnail: Ένα χέρι που κρατάει μία πυξίδα">
+                        
+                        <div class="post-image-overlay"></div>
+                        
+                        <div class="post-topic-label">
+
+                            
+                            Localization
+                            
+                        </div>
+                    </div>
+                </a>
+                <div class="post-info">
+                    <p class="post-date">
+                        🗓️   
+
+
+
+
+
+
+
+
+
+18 Ιαν 2025
+
+                        -
+                        
+                            👤 Χρήστος Σπυριδάκης
+                        
+                    </p>
+                    <a href="../../posts/engineering/localization/localization-algorithms.html" class="ancor-style">
+                        <h3 class="post-title">Αλγόριθμοι σχετικά με τον υπολογισμό θέσης αντικειμένων</h3>
+                        <p class="post-summary">Λεπτομέρειες των αλγορίθμων που χρησιμοποιούμε για τον υπολογισμό της θέσης ενός αντικειμένου στον 3D χώρο.</p>
+                    </a>
+                    <div class="post-tags">
+                        
+                        <a href="../../tags/gps.html" class="tag ancor-style">#GPS</a>
+                        
+                    </div>
+                </div>
+            </article>
+        
+    </div>
+</section>
+
+
+<section class="section-about">
+    <div class="about-container">
+        <h2>Το όραμα μας</h2>
+        <p class="text-justify">
+            Η ομάδα του Stemerot έχει ως όραμα να εμπνεύσει και να ενδυναμώσει τα άτομα στον κόσμο 
+            της τεχνολογίας και της καινοτομίας. Στόχος μας είναι να καλλιεργήσουμε μια κοινότητα όπου 
+            η γνώση μοιράζεται και η περιέργεια ανταμείβεται. 
+        </p>
+        <h2>Οι στόχοι μας</h2>
+        <p class="text-justify">
+            Να παρέχουμε προσιτό, ελκυστικό και ενημερωμένο περιεχόμενο, το οποίο, με απλό και κατανοητό 
+            τρόπο, ενημερώνει και συμβάλλει στη μείωση του χάσματος μεταξύ αρχαρίων και ειδικών στα πεδία STEM. 
+        </p>
+    </div>
+</section>
+
+
+<section class="newsletter-section">
+    <div class="newsletter-container">
+        <div style="text-align: left" class="sender-form-field sender-form-white" data-sender-form-id="m86r8hmle9rpnz0jzqq"></div>
+        <div style="text-align: left" class="sender-form-field sender-form-dark" data-sender-form-id="3c1396a8229a71092LI"></div>
+    </div>
+</section>
+
+
+
+  <footer id="footer" class="site-footer">
+  <div class="footer-container">
+    <div class="footer-links footer-about-us">
+      <h3>Σχετικά με εμάς</h3>
+      <ul>
+        <li><a href="../../about/index.html">Ποιοί είμαστε;</a></li>
+        <li><a href="../../authors/index.html">Αρθρογράφοι</a></li>
+        <li><a href="../../faq/index.html">FAQ</a></li>
+        <li><a href="../../editor/index.html">Post Editor</a></li>
+      </ul>
+    </div>
+    <div class="footer-links footer-follow-us-links">
+      <h3>Ακολούθησε μας</h3>
+      <ul class="footer-icons-ul">
+        <li><a href="https://www.linkedin.com/company/stemerot/"><img class="footer-icons" src="../../img/social/linkedin-icon.svg" alt="Linkedin icon"/></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100090351596163"><img class="footer-icons" src="../../img/social/facebook-icon.svg" alt="Facebook icon"/></a></li>
+        <li><a href="https://x.com/stemerot"><img class="footer-icons" src="../../img/social/x-icon.svg" alt="X icon"/></a></li>
+        <li><a href="https://www.instagram.com/stemerot/"><img class="footer-icons" src="../../img/social/instagram-icon.svg" alt="Instagram icon"/></a></li>
+        <li><a href="https://open.spotify.com/show/1GYMIFjNTAyXdvDJPLH0V1"><img class="footer-icons" src="../../img/social/spotify-icon.svg" alt="Spotify icon"/></a></li>
+        <li><a href="https://discord.gg/M7c22wa7"><img class="footer-icons" src="../../img/social/discord-icon.svg" alt="Discord icon"/></a></li>
+        <li><a href="https://www.youtube.com/@stemerot"><img class="footer-icons" src="../../img/social/youtube-icon.svg" alt="Youtube icon"/></a></li>
+      </ul>
+    </div>
+    <div class="footer-links footer-communication">
+      <h3>Επικοινωνία</h3>
+      <ul>
+        <li><script type="text/javascript">
+  (function(){
+    var encoded = "aW5mb0BzdGVtZXJvdC5jb20=";
+    var email = atob(encoded);
+    document.write('<a class="color-inherit" href="mailto:' + email + '">' + "Email" + '</a>');
+  })();
+</script>
+<noscript>Email</noscript>
+</li>
+        <li><a href="../../privacy-policy.html">Πολιτική Απορρήτου</a></li>
+        <li><a href="../../terms-of-usage/index.html">Όροι Χρήσης</a></li>
+        <li><a href="../../contribution-terms.html">Όροι Υποβολής Περιεχομένου</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    Stemerot &copy; 2025. All rights reserved.
+    <br>
+    Developed by <script type="text/javascript">
+  (function(){
+    var encoded = "Z3JlaGFzb3B0QGdtYWlsLmNvbQ==";
+    var email = atob(encoded);
+    document.write('<a class="color-inherit" href="mailto:' + email + '">' + "Grehasopt" + '</a>');
+  })();
+</script>
+<noscript>Grehasopt</noscript>
+
+  </div>
+</footer>
+  <div id="cookie-consent-banner" class="cookie-banner" role="dialog" aria-modal="true" aria-labelledby="cookie-consent-title" style="display: none;">
+  <h2 id="cookie-consent-title" class="visually-hidden">Cookie Consent</h2>
+  <p>
+    Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας, να εμφανίζουμε εξατομικευμένες διαφημίσεις και να αναλύουμε την κίνηση. 
+    Για περισσότερες λεπτομέρειες σχετικά με τη διαχείριση των προσωπικών σας δεδομένων, καθώς και τους 
+    <a href="../../terms-of-usage/index.html" class="color-inherit">Όρους Χρήσης</a> και την 
+    <a href="../../privacy-policy.html" class="color-inherit">Πολιτική Απορρήτου</a>, παρακαλούμε διαβάστε τις αντίστοιχες σελίδες. 
+    Σε περίπτωση που συνεχίσετε να χρησιμοποιείτε αυτόν τον ιστότοπο, συμφωνείτε με τους παραπάνω όρους. Εάν δεν συμφωνείτε, παρακαλούμε να εξέλθετε από τη σελίδα.
+  </p>
+  <button id="accept-all-cookies">Αποδοχή όλων</button>
+  <button id="accept-mandatory-cookies">Αποδοχή μόνο των απαραίτητων</button>
+</div>
+
+  
+<script>
+
+
+window.addEventListener('DOMContentLoaded', function() {
+    var cookieConsent = localStorage.getItem('cookieConsent');
+    var banner = document.getElementById('cookie-consent-banner');
+
+    
+    if (!cookieConsent) {
+        banner.style.display = 'block';
+        } else if (cookieConsent === 'accepted-all') {
+           
+        loadGoogleAnalytics();
+        loadGoogleAdSense();
+    }
+});
+
+    
+    document.getElementById('accept-all-cookies').addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'accepted-all');
+    document.getElementById('cookie-consent-banner').style.display = 'none';
+
+    
+    loadGoogleAnalytics();
+    loadGoogleAdSense();
+});
+
+    
+    document.getElementById('accept-mandatory-cookies').addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'accepted-mandatory');
+    document.getElementById('cookie-consent-banner').style.display = 'none';
+
+        
+});
+
+
+
+function loadGoogleAnalytics() {
+    var gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-2JQ9H53HHS';
+    document.head.appendChild(gaScript);
+
+    gaScript.onload = function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-2JQ9H53HHS', { 'anonymize_ip': true });
+    };
+}
+
+
+
+function loadGoogleAdSense() {
+    var adsScript = document.createElement('script');
+    adsScript.async = true;
+    adsScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5957385556386219';
+    adsScript.crossorigin = 'anonymous';
+    document.head.appendChild(adsScript);
+}
+</script>
+  <script>
+
+document.getElementById('menu-toggle').addEventListener('click', function () {
+    const nav = document.getElementById('main-nav');
+    nav.classList.toggle('active'); 
+});
+
+
+document.addEventListener('click', function(e) {
+    const nav = document.getElementById('main-nav');
+    const menuToggle = document.getElementById('menu-toggle');
+    
+    if (nav.classList.contains('active') && 
+        !nav.contains(e.target) && 
+        !menuToggle.contains(e.target)) {
+        nav.classList.remove('active');
+    }
+});
+
+let lastScrollPosition = 0;
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+    const currentScrollPosition = window.scrollY;
+
+    if (currentScrollPosition > lastScrollPosition && currentScrollPosition > 100) {
+        
+        header.style.transform = 'translateY(-100%)';
+    } else {
+        
+        header.style.transform = 'translateY(0)';
+    }
+
+    lastScrollPosition = currentScrollPosition;
+});
+</script>
+
+<script>
+
+const themeToggleBtn = document.getElementById("toggle-theme");
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme === "dark") {
+    document.body.classList.add("dark-theme");
+}
+themeToggleBtn.addEventListener("click", function () {
+    document.body.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")) {
+    localStorage.setItem("theme", "dark");
+    } else {
+    localStorage.setItem("theme", "light");
+    }
+});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  
+  const searchInputs = document.querySelectorAll(".search-input");
+  if (searchInputs.length === 0) return;
+
+  
+  fetch("/index.json")
+    .then(response => response.json())
+    .then(data => {
+      const options = {
+        keys: ['title', 'summary', 'description', 'category', 'content'],
+        includeScore: true,
+        includeMatches: true,
+        threshold: 0.3,            
+        ignoreLocation: true,      
+        findAllMatches: true,      
+        minMatchCharLength: 2      
+      };
+      const fuse = new Fuse(data, options);
+
+      
+      function handleSearchInput(e) {
+        const input = e.target;
+        
+        const resultsContainer = input.nextElementSibling;
+        if (!resultsContainer) return;  
+
+        const query = input.value.trim().toLowerCase();
+        resultsContainer.innerHTML = "";
+        if (query.length < 2) {
+          resultsContainer.style.display = "none";
+          return;
+        }
+        resultsContainer.style.display = "block";
+        resultsContainer.style.width = "400px"; 
+
+        const fuseResults = fuse.search(query);
+
+        
+        fuseResults.slice(0, 5).forEach(result => {
+          const item = result.item;
+          let snippetHTML = "";
+          if (result.matches && Array.isArray(result.matches)) {
+            for (const match of result.matches) {
+              if (match.indices && match.indices.length > 0) {
+                const fieldName = match.key;
+                const fieldText = item[fieldName] || "";
+                if (fieldText) {
+                  const [start, end] = match.indices[0];
+                  const contextBefore = 30;
+                  const contextAfter = 30;
+                  const snippetStart = Math.max(0, start - contextBefore);
+                  const snippetEnd = Math.min(fieldText.length, end + contextAfter);
+                  let snippet = fieldText.substring(snippetStart, snippetEnd);
+                  if (snippetStart > 0) {
+                    snippet = "..." + snippet;
+                  }
+                  if (snippetEnd < fieldText.length) {
+                    snippet = snippet + "...";
+                  }
+                  const matchText = fieldText
+                    .substring(start, end + 1)
+                    .replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                  const regexHighlight = new RegExp("(" + matchText + ")", "gi");
+                  snippetHTML = snippet.replace(regexHighlight, "<strong>$1</strong>");
+                  break; 
+                }
+              }
+            }
+          }
+          
+          const div = document.createElement("div");
+          div.style.marginBottom = "1rem";
+          div.innerHTML = `
+            <a href="https://stemerot.com/apps/gdc/${item.url}" style="text-decoration: none;">
+              <strong style="color:#000">${item.title}</strong>
+              <div style="font-size: 0.8rem; font-weight: normal; color: #444; margin-top: 0.25rem;">
+                ${snippetHTML}
+              </div>
+            </a>
+          `;
+          resultsContainer.appendChild(div);
+        });
+        
+        if (fuseResults.length === 0) {
+          resultsContainer.innerHTML = "<p style=\"color:#333\">Δεν βρέθηκαν αποτελέσματα.</p>";
+        }
+      }
+      
+      
+      searchInputs.forEach(input => {
+        input.addEventListener("input", handleSearchInput);
+        input.addEventListener("focus", function(){
+          if (input.value.trim().length >= 2) {
+            const resultsContainer = input.nextElementSibling;
+            if (resultsContainer) resultsContainer.style.display = "block";
+          }
+        });
+      });
+      
+      
+      document.addEventListener("click", function(e) {
+        searchInputs.forEach(input => {
+          const resultsContainer = input.nextElementSibling;
+          if (resultsContainer && !input.contains(e.target) && !resultsContainer.contains(e.target)) {
+            resultsContainer.style.display = "none";
+          }
+        });
+      });
+    })
+    .catch(err => console.error("Error loading search index:", err));
+});
+</script>
+
+</body>
+</html>

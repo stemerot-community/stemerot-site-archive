@@ -42,7 +42,8 @@
 #
 
 # ------------------------------------------------------------------------------------------------------
-title: "Ο τίτλος του post στα ελληνικά" # TODO: Title of the blog post.
+# TODO: Title of the blog post.
+title: "Ο τίτλος του post στα ελληνικά" 
 date:  2025-01-13                       # TODO: Date of post creation.
 lastmod: 2025-01-16                     # TODO: Date of post last modification.
 publishdate: 2025-01-16                 # TODO: Date of post publication date.
@@ -50,12 +51,12 @@ publishdate: 2025-01-16                 # TODO: Date of post publication date.
 
 # ------------------------------------------------------------------------------------------------------
 # TODO: Add a small summary (summary will be visible to the post card, along with the title)
-summary: ""
+summary: "Sample summary"
 # ------------------------------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------------------------------
 # TODO: Add a small description (is used for indexing, can be the same as summary)
-description: "" 
+description: "Sample Description" 
 # ------------------------------------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------------------------------------
@@ -74,7 +75,7 @@ topics:
 
 # ------------------------------------------------------------------------------------------------------
 # TODO: Add the path of your thumbnail (Only acceptable format is webp)
-image: "/img/posts/topic/thumbnail.webp"
+image: "/img/banners/404.webp"
 # TODO: Add what your thumbnail shows
 imgAlt: "Thumbnail: TODO"
 # ------------------------------------------------------------------------------------------------------
