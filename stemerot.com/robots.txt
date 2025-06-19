@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stemerot.com/sitemap.xml
