@@ -124,6 +124,12 @@ In this section, we will showcase how different kinds of input can be inserted.
 When you want to include inline equations, then put your paragraphs into \<p\> tags and your equations inside \\( ... \\).
 
 Example:
+```
+<p>
+  This is an inline equation: \(y_y=mx+2\).
+</p>
+```
+Output:
 <p>
   This is an inline equation: \(y_y=mx+2\).
 </p>
@@ -134,6 +140,12 @@ Example:
 For multiline equations use $$
 
 Example:
+```
+$$
+  P_r(d)=\frac{P_tG_tG_r\lambda^2}{(4\pi)^2d^2} 
+$$
+```
+Output:
 $$
   P_r(d)=\frac{P_tG_tG_r\lambda^2}{(4\pi)^2d^2} 
 $$
@@ -197,6 +209,8 @@ Regarding figures, the preferable method is the following:
 - https://www.pexels.com/
 - https://pixabay.com/
 - https://unsplash.com/s/photos/commercial-use
+
+---
 
 ### 6. Admonitions
 {{< admonition type="warning" title="Warning" >}}
