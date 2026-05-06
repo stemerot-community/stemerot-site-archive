@@ -5,7 +5,7 @@ on:
     branches: 
       - main
   schedule:
-    - cron: '0 12 * * *' # Runs at noon UTC every day
+    - cron: '0 12 */10 * *' # Runs at noon UTC every 10 days
 
 # Ensure only one build per branch is running at a time
 concurrency:
